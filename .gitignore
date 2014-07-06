@@ -1,5 +1,12 @@
+# Vim
+Session.vim
+*.swo
+*.swp
+
+# JVM
 *.class
 *.log
+*.jar
 
 # sbt specific
 .cache/
