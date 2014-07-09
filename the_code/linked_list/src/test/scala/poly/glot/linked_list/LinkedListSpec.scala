@@ -1,16 +1,18 @@
 class LinkedList() {
   private var elementCount = 1
+  private var nextElement : Option[LinkedList] = None
 
   def size() : Int = {
     return elementCount
   }
 
   def next() : Option[LinkedList] = {
-    return None
+    return nextElement
   }
 
   def add(next : LinkedList) = {
     elementCount += 1
+    nextElement = Some(next)
   }
 }
 
@@ -35,6 +37,9 @@ object LinkedLstSpec extends Specification {
 
     "have a size of 2" in {
       subject.size() must be_==(2)
+    }
+    "have the added element as its next element" in {
+      subject.next() must be_==(Some(addedElement))
     }
   }
 }
