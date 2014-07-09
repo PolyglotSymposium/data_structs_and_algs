@@ -1,19 +1,19 @@
 class LinkedList() {
   def size() : Int = {
-    return 0
+    return 1
   }
 
   def next() : Option[LinkedList] = {
-    return None 
+    return None
   }
 }
 
 import org.specs2.mutable._
 
-object LinkedListSpec extends Specification {
+object LinkedLstSpec extends Specification {
   "A newly initialized LinkedList " should {
-    "have a size of 0" in {
-      new LinkedList().size() must be_==(0)
+    "have a size of 1" in {
+      new LinkedList().size() must be_==(1)
     }
     "have no next element" in {
       new LinkedList().next() must beNone
