@@ -26,4 +26,16 @@ object LinkedLstSpec extends Specification {
       subject.next() must be_==(Some(addedElement))
     }
   }
+
+  "A linked list with two elements added to it" should {
+    val subject = new LinkedList()
+    val addedElement = new LinkedList()
+    val anotherAddedElement = new LinkedList()
+    subject.add(addedElement)
+    addedElement.add(anotherAddedElement)
+
+    "have a size of 3" in {
+      subject.size() must be_==(3)
+    }
+  }
 }
