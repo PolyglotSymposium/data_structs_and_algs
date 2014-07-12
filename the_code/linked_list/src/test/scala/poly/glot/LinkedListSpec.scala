@@ -4,7 +4,7 @@ import org.specs2.mutable._
 
 object LinkedLstSpec extends Specification {
   "A newly initialized LinkedList" should {
-    val subject = new LinkedList()
+    val subject = new LinkedList[ScalaObject]()
 
     "have a size of 1" in {
       subject.size() must be_==(1)
@@ -15,8 +15,8 @@ object LinkedLstSpec extends Specification {
   }
 
   "A linked list with an element added to it" should {
-    val subject = new LinkedList()
-    val addedElement = new LinkedList()
+    val subject = new LinkedList[ScalaObject]()
+    val addedElement = new LinkedList[ScalaObject]()
     subject.add(addedElement)
 
     "have a size of 2" in {
@@ -28,9 +28,9 @@ object LinkedLstSpec extends Specification {
   }
 
   "A linked list with two elements added to it" should {
-    val subject = new LinkedList()
-    val addedElement = new LinkedList()
-    val anotherAddedElement = new LinkedList()
+    val subject = new LinkedList[ScalaObject]()
+    val addedElement = new LinkedList[ScalaObject]()
+    val anotherAddedElement = new LinkedList[ScalaObject]()
     subject.add(addedElement)
     addedElement.add(anotherAddedElement)
 

@@ -1,7 +1,7 @@
 package poly.glot
 
-class LinkedList() {
-  private var nextElement : Option[LinkedList] = None
+class LinkedList[T]() {
+  private var nextElement : Option[LinkedList[T]] = None
 
   def size() : Int = {
     nextElement match {
@@ -10,11 +10,11 @@ class LinkedList() {
     }
   }
 
-  def next() : Option[LinkedList] = {
+  def next() : Option[LinkedList[T]] = {
     nextElement
   }
 
-  def add(next : LinkedList) = {
+  def add(next : LinkedList[T]) = {
     nextElement = Some(next)
   }
 }
