@@ -38,4 +38,13 @@ object LinkedLstSpec extends Specification {
       subject.size() must be_==(3)
     }
   }
+
+  "A linked list given a type parameter of Int, that has a value added to it" should {
+    val subject = new LinkedList[Int]()
+    subject.setData(42)
+
+    "have the integer value that was set" in {
+      subject.data() must be_==(42)
+    }
+  }
 }
