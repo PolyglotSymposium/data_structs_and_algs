@@ -13,6 +13,10 @@ class LinkedList[T]() {
     return datum
   }
 
+  def mapData[T2](f: T => T2): List[T2] = {
+    List(f(datum))
+  }
+
   def setData(d: T) = {
     datum = d
   }

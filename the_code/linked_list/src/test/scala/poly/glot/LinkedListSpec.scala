@@ -46,5 +46,8 @@ object LinkedLstSpec extends Specification {
     "have the integer value that was set" in {
       subject.data() must be_==(42)
     }
+    "has a transformed Int in a List, after a map is performed" in {
+      subject.mapData[Int]((x: Int) => x + 1) must be_==(List(43))
+    }
   }
 }
