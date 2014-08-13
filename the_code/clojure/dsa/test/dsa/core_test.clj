@@ -13,3 +13,7 @@
 (deftest sorted-two-already-sorted-elements
   (testing "sorting two already sorted elements"
     (is (= (qsort [42 43]) [42 43]))))
+
+(deftest sorted-two-unsorted
+  (testing "sorting two un-sorted elements"
+    (is (= (qsort [43 42]) [42 43]))))
