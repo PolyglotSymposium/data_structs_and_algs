@@ -2,7 +2,7 @@
   (:gen-class))
 
 (defn qsort [xs]
-  [])
+  xs)
 
 (defn -main
   "I don't do a whole lot ... yet."
