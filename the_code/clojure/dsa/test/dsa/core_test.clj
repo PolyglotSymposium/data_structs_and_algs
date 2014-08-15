@@ -12,10 +12,10 @@
   (testing (is (= (-> (mycons 35 (newlist 42)) :data :next ))) 42))
 
 (def dummySubList (mycons 72 (newlist 91)))
-(def dummyList (mycons 91 dummySubList))
+(def dummyList (mycons 92 dummySubList))
 
 (deftest head-of-list-is-data-from-current
-  (testing (is (= 91 (myhead dummyList)))))
+  (testing (is (= 92 (myhead dummyList)))))
 
 (deftest rest-of-list-is-all-nodes-below-current
   (testing (is (= dummySubList (myrest dummyList)))))
