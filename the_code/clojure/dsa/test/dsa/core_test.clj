@@ -2,18 +2,6 @@
   (:require [clojure.test :refer :all]
             [dsa.core :refer :all]))
 
-(deftest sorted-empty-list-is-empty
-  (testing "sorting an empty list"
-    (is (= (qsort []) []))))
-
-(deftest sorted-single-element-list-is-same
-  (testing "sorting a list with one element"
-    (is (= (qsort [42]) [42]))))
-
-(deftest sorted-two-already-sorted-elements
-  (testing "sorting two already sorted elements"
-    (is (= (qsort [42 43]) [42 43]))))
-
-(deftest sorted-two-unsorted
-  (testing "sorting two un-sorted elements"
-    (is (= (qsort [43 42]) [42 43]))))
+(deftest empty-list-has-endoflist-as-next
+  (testing "empty list has endoflist as next"
+   (is (= (:next emptylist)) :endoflist)))

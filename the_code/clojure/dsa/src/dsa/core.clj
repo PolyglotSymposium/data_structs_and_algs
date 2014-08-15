@@ -1,6 +1,9 @@
 (ns dsa.core
   (:gen-class))
 
+(defrecord MyList [next])
+(def emptylist (MyList. :endoflist))
+
 (defn qsort [xs]
   (if (< 2 (count xs)) xs
   (let [x (first xs) r (rest xs)]
