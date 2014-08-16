@@ -8,9 +8,16 @@
 (defn myhead [list] (:data list))
 (defn myrest [list] (:next list))
 
+
+(defn already-sorted? [xs] (> 2 (count xs)))
+
+(defn pivot-partition [pivot remainder]
+  (let [{lt true gte false} (group-by #(< % pivot) remainder)]
+    [lt gte]))
+
 (defn qsort [xs]
-  (if (> 2 (count xs))
+  (if (already-sorted? xs)
     xs
     (let [pivot (first xs)]
-      (let [{lt true gte false} (group-by #(< % pivot) (rest xs))]
+      (let [[lt gte] (pivot-partition pivot (rest xs))]
         (concat (qsort lt) [pivot] (qsort gte))))))
