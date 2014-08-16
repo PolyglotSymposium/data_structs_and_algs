@@ -11,6 +11,6 @@
 (defn qsort [xs]
   (if (> 2 (count xs))
     xs
-    (let [pivot (first xs) remainder (rest xs)]
-      (let [{lt true gte false} (group-by #(< % pivot) remainder)]
+    (let [pivot (first xs)]
+      (let [{lt true gte false} (group-by #(< % pivot) (rest xs))]
         (concat (qsort lt) [pivot] (qsort gte))))))
