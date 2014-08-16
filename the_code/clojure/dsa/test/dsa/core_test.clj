@@ -19,3 +19,20 @@
 
 (deftest rest-of-list-is-all-nodes-below-current
   (testing (is (= dummySubList (myrest dummyList)))))
+
+
+
+(deftest qsort-of-empty-is-empty
+  (testing (is (= [] (qsort [])))))
+
+(deftest qsort-of-one-element-is-that
+  (testing (is (= [42] (qsort [42])))))
+
+(deftest qsort-of-two-ordered-elements-is-same
+  (testing (is (= [42 43] (qsort [42 43])))))
+
+(deftest qsort-of-two-unordered-elements-is-reverse
+  (testing (is (= [42 43] (qsort [43 42])))))
+
+(deftest qsort-end-to-end
+  (testing (is (= [-42 -9 -1 -1 0 9 72 99 107] (qsort [-42 0 -1 -1 99 107 72 -9 9])))))
