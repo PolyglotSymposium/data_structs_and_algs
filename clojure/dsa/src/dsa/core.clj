@@ -18,6 +18,6 @@
 (defn qsort [xs]
   (if (already-sorted? xs)
     xs
-    (let [pivot (first xs)]
-      (let [[lt gte] (pivot-partition pivot (rest xs))]
-        (concat (qsort lt) [pivot] (qsort gte))))))
+    (let [pivot (first xs)
+      [lt gte] (pivot-partition pivot (rest xs))]
+        (concat (qsort lt) [pivot] (qsort gte)))))
