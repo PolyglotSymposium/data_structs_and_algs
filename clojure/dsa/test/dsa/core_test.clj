@@ -37,14 +37,16 @@
 (deftest qsort-end-to-end
   (testing (is (= [-42 -9 -1 -1 0 9 72 99 107] (qsort [-42 0 -1 -1 99 107 72 -9 9])))))
 
+
+
 (deftest anagrams-of-empty-is-empty
-   (testing (is (= [] (anagrams [])))))
+  (testing (is (= [] (anagrams [])))))
 
 (deftest anagrams-of-one-word-is-vector-of-vector-of-that-word
-   (testing (is (= [["foobar"]] (anagrams ["foobar"])))))
+  (testing (is (= [["foobar"]] (anagrams ["foobar"])))))
 
 (deftest anagrams-works-for-two-anagrams
-   (testing (is (= [["too" "oto"]] (anagrams ["too" "oto"])))))
+  (testing (is (= [["too" "oto"]] (anagrams ["too" "oto"])))))
 
 (deftest anagrams-works-for-many
-   (testing (is (= (sort [["too" "oto"] ["dog"] ["sword" "words"]]) (sort (anagrams ["too" "sword" "dog" "words" "oto"]))))))
+  (testing (is (= (sort [["too" "oto"] ["dog"] ["sword" "words"]]) (sort (anagrams ["too" "sword" "dog" "words" "oto"]))))))
