@@ -24,8 +24,10 @@
 
 (defn anagrams [words] (or (vals (group-by sort words)) []))
 
-(defn fizzbuzz [number] (if (= (rem number 3) 0)
+(defn div-by? [n d] (= (rem n d)0))
+
+(defn fizzbuzz [number] (if (div-by? number 3)
   "Fizz"
-  (if (= (rem number 5) 0)
+  (if (div-by? number 5)
     "Buzz"
     (str number))))
