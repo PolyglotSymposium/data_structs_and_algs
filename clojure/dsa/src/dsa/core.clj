@@ -1,6 +1,8 @@
 (ns dsa.core
   (:gen-class))
 
+(use '[clojure.core.match :only (match)])
+
 (defrecord MyList [next data])
 
 (defn newlist [x] (MyList. :endoflist x))
@@ -26,8 +28,9 @@
 
 (defn div-by? [n d] (= (rem n d)0))
 
-(defn fizzbuzz [number] (if (div-by? number 3)
-  (if (div-by? number 5) "FizzBuzz" "Fizz")
-  (if (div-by? number 5)
-    "Buzz"
-    (str number))))
+(defn fizzbuzz [number]
+  (match [(div-by? number 3) (div-by? number 5)]
+    [true true] "FizzBuzz"
+    [true false] "Fizz"
+    [false true] "Buzz"
+    :else (str number)))
