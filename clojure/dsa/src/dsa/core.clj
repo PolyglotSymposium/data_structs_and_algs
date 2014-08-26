@@ -26,6 +26,6 @@
 
 (defn fizzbuzz [number] (if (= (rem number 3) 0)
   "Fizz"
-  (if (= 5 number)
+  (if (= (rem number 5) 0)
     "Buzz"
     (str number))))
