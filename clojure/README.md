@@ -11,3 +11,23 @@ ended up following the instructions on the Github page.
 
 because I already had `~/bin` in my `$PATH` anyway (it's quite handy for a
 developer/power-user).
+
+
+## How Gilli Installed Clojure on Ubuntu (14.04)
+I downloaded the leiningen script from it's site (http://leiningen.org/
+
+Made it executable:
+
+    chmod +x lein
+    
+Moved it to some bin (I think I used `/bin` although I probably shouldn't have)
+
+Installed the JDK:
+
+    sudo apt-get install openjdk-7-jdk
+    
+Upgraded lein:
+
+    lein upgrade
+
+That's about it. `lein deps` should probably be run in the project's root
