@@ -64,6 +64,8 @@
 (deftest number-div-by-5-is-Fizz
   (testing (is (= "Buzz" (fizzbuzz 10)))))
 
-
 (deftest fizz-buzz-of-2-is-2
   (testing (is (= "2" (fizzbuzz 2)))))
+
+(deftest fizz-buzz-of-15-is-FizzBuzz
+  (testing (is (= "FizzBuzz" (fizzbuzz 15)))))

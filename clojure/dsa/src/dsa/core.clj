@@ -27,7 +27,7 @@
 (defn div-by? [n d] (= (rem n d)0))
 
 (defn fizzbuzz [number] (if (div-by? number 3)
-  "Fizz"
+  (if (div-by? number 5) "FizzBuzz" "Fizz")
   (if (div-by? number 5)
     "Buzz"
     (str number))))
