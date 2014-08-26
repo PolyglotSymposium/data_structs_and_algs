@@ -23,3 +23,5 @@
         (concat (qsort lt) [pivot] (qsort gte)))))
 
 (defn anagrams [words] (or (vals (group-by sort words)) []))
+
+(defn fizzbuzz [number] (if (= 3 number) "Fizz" "Buzz"))

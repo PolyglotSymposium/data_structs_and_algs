@@ -50,3 +50,9 @@
 
 (deftest anagrams-works-for-many
   (testing (is (= (sort [["too" "oto"] ["dog"] ["sword" "words"]]) (sort (anagrams ["too" "sword" "dog" "words" "oto"]))))))
+
+(deftest fizz-buzz-of-3-is-Fizz
+  (testing (is (= "Fizz" (fizzbuzz 3)))))
+
+(deftest fizz-buzz-of-5-is-Buzz
+  (testing (is (= "Buzz" (fizzbuzz 5)))))
