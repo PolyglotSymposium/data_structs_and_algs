@@ -37,7 +37,7 @@
 
 (defn fibs-until 
   ([n]
-    (vec (range 1 (inc n))))
+    (->> n inc (range 1) vec))
 )
 
 
