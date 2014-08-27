@@ -77,3 +77,6 @@
 
 (deftest fibs-until-3
   (testing (is (= [1 2 3] (fibs-until 3)))))
+
+(deftest fibs-until-4
+  (testing (is (= [1 2 3] (fibs-until 4)))))
