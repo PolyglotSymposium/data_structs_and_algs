@@ -68,6 +68,7 @@
 (deftest fizz-buzz-of-15-is-FizzBuzz
   (testing (is (= "FizzBuzz" (fizzbuzz 15)))))
 
+
 (deftest fibs-until-1
   (testing (is (= [1] (fibs-until 1)))))
 
