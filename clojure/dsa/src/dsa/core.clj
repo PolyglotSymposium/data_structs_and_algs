@@ -47,10 +47,11 @@
 
 (defn zeckendorf
   ([n]
-    (if (= 0 n)
-      "0"
-      (apply str (zeckendorf n (reverse (fibs-until n))))))
+    (if (= 0 n) "0" (zeckendorf n (reverse (fibs-until n)))))
   ([n fibs]
     (if (= fibs [])
       ""
-      (if (or (= 0 n) (> (first fibs) n)) (cons "0" (zeckendorf n (rest fibs))) (cons "1" (zeckendorf (- n (first fibs)) (rest fibs)))))))
+      (let [head (first fibs) tail (rest fibs)]
+        (if (or (> head n) (= 0 n))
+          (str "0" (zeckendorf n tail))
+          (str "1" (zeckendorf (- n head) tail)))))))
