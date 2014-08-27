@@ -86,3 +86,6 @@
 
 (deftest zeckendorf-0
   (testing (is (= "0" (zeckendorf 0)))))
+
+(deftest zeckendorf-1
+  (testing (is (= "1" (zeckendorf 1)))))

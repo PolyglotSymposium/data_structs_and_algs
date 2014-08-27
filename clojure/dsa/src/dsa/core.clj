@@ -44,7 +44,6 @@
     (let [fib (+ a b)]
       (if (> fib n) 
         []
-        (cons fib (fibs-until n b fib)))))
-)
+        (cons fib (fibs-until n b fib))))))
 
-(defn zeckendorf [n] "0")
+(defn zeckendorf [n] (str n))
