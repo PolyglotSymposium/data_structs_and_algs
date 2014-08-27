@@ -70,3 +70,6 @@
 
 (deftest fibs-until-1
   (testing (is (= [1] (fibs-until 1)))))
+
+(deftest fibs-until-2
+  (testing (is (= [1 2] (fibs-until 2)))))

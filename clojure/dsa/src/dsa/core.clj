@@ -35,4 +35,4 @@
     [false true] "Buzz"
     :else (str number)))
 
-(defn fibs-until [n] [1])
+(defn fibs-until [n] (vec (range 1 (inc n))))
