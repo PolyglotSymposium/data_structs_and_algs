@@ -37,15 +37,12 @@
 
 (defn fibs-until 
   ([n]
-    (if (< n 3)
-      (vec (range 1 (inc n)))
-      (into [] (concat [1 2] (fibs-until n 1 2)))))
+    (vec (if (< n 3)
+      (range 1 (inc n))
+      (concat [1 2] (fibs-until n 1 2)))))
   ([n a b]
-      (if (> (+ a b) n) 
+    (let [fib (+ a b)]
+      (if (> fib n) 
         []
-        (cons (+ a b) (fibs-until n b (+ a b)))))
+        (cons fib (fibs-until n b fib)))))
 )
-
-
-
-
