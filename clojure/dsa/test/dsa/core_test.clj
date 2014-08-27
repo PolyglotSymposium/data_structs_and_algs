@@ -80,3 +80,9 @@
 
 (deftest fibs-until-4
   (testing (is (= [1 2 3] (fibs-until 4)))))
+
+(deftest fibs-until-5
+  (testing (is (= [1 2 3 5] (fibs-until 5)))))
+
+(deftest zeckendorf-0
+  (testing (is (= "0" (zeckendorf 0)))))

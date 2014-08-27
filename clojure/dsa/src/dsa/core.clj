@@ -46,3 +46,5 @@
         []
         (cons fib (fibs-until n b fib)))))
 )
+
+(defn zeckendorf [n] "0")
