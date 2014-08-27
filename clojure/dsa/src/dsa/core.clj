@@ -10,7 +10,6 @@
 (defn myhead [list] (:data list))
 (defn myrest [list] (:next list))
 
-
 (defn already-sorted? [xs] (> 2 (count xs)))
 
 (defn pivot-partition [pivot remainder]
@@ -46,4 +45,12 @@
         []
         (cons fib (fibs-until n b fib))))))
 
-(defn zeckendorf [n] (str n))
+(defn zeckendorf
+  ([n]
+    (if (= 0 n)
+      "0"
+      (apply str (zeckendorf n (reverse (fibs-until n))))))
+  ([n fibs]
+    (if (= fibs [])
+      ""
+      (if (or (= 0 n) (> (first fibs) n)) (cons "0" (zeckendorf n (rest fibs))) (cons "1" (zeckendorf (- n (first fibs)) (rest fibs)))))))

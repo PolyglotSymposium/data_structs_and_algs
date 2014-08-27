@@ -89,3 +89,9 @@
 
 (deftest zeckendorf-1
   (testing (is (= "1" (zeckendorf 1)))))
+
+(deftest zeckendorf-2
+  (testing (is (= "10" (zeckendorf 2)))))
+
+(deftest zeckendorf-11
+  (testing (is (= "10100" (zeckendorf 11)))))
