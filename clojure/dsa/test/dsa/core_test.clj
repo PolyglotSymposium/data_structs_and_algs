@@ -21,7 +21,6 @@
   (testing (is (= dummySubList (myrest dummyList)))))
 
 
-
 (deftest qsort-of-empty-is-empty
   (testing (is (= [] (qsort [])))))
 
@@ -36,7 +35,6 @@
 
 (deftest qsort-end-to-end
   (testing (is (= [-42 -9 -1 -1 0 9 72 99 107] (qsort [-42 0 -1 -1 99 107 72 -9 9])))))
-
 
 
 (deftest anagrams-of-empty-is-empty
@@ -69,3 +67,6 @@
 
 (deftest fizz-buzz-of-15-is-FizzBuzz
   (testing (is (= "FizzBuzz" (fizzbuzz 15)))))
+
+(deftest fibs-until-1
+  (testing (is (= [1] (fibs-until 1)))))

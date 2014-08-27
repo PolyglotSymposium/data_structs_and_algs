@@ -34,3 +34,5 @@
     [true false] "Fizz"
     [false true] "Buzz"
     :else (str number)))
+
+(defn fibs-until [n] [1])
