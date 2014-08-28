@@ -69,6 +69,10 @@
   (testing (is (= "FizzBuzz" (fizzbuzz 15)))))
 
 
+(deftest take-7-fizz-returns-fizz-every-three-and-blank-every-other-time
+  (testing (is (= (seq ["" "" "fizz" "" "" "fizz" ""]) (take 7 (fizz))))))
+
+
 (deftest fibs-until-1
   (testing (is (= [1] (fibs-until 1)))))
 

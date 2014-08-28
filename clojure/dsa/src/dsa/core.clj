@@ -34,6 +34,8 @@
     [false true] "Buzz"
     :else (str number)))
 
+(defn fizz [] (cycle ["" "" "fizz"]))
+
 (defn fibs-until 
   ([n]
     (vec (if (< n 3)
