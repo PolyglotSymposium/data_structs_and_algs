@@ -72,6 +72,9 @@
 (deftest take-7-fizz-returns-fizz-every-three-and-blank-every-other-time
   (testing (is (= (seq ["" "" "fizz" "" "" "fizz" ""]) (take 7 (fizz))))))
 
+(deftest take-6-buzz-returns-fizz-every-five-and-blank-every-other-time
+  (testing (is (= (seq ["" "" "" "" "buzz" ""]) (take 6 (buzz))))))
+
 
 (deftest fibs-until-1
   (testing (is (= [1] (fibs-until 1)))))

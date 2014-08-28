@@ -36,6 +36,8 @@
 
 (defn fizz [] (cycle ["" "" "fizz"]))
 
+(defn buzz [] (cycle ["" "" "" "" "buzz"]))
+
 (defn fibs-until 
   ([n]
     (vec (if (< n 3)
