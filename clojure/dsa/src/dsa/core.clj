@@ -38,7 +38,7 @@
   (lazy-seq (cons a (fibs-beginning-at b (+ a b)))))
 
 (defn fibs-until [n]
-  (take-while #(< % n) (fibs-beginning-at 1 2)))
+  (take-while #(<= % n) (fibs-beginning-at 1 2)))
 
 (defn zeckendorf
   ([n]
