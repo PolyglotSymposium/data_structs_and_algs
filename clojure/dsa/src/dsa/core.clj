@@ -34,16 +34,11 @@
     [false true] "Buzz"
     :else (str number)))
 
-(defn fibs-until 
-  ([n]
-    (vec (if (< n 3)
-      (range 1 (inc n))
-      (concat [1 2] (fibs-until n 1 2)))))
-  ([n a b]
-    (let [fib (+ a b)]
-      (if (> fib n) 
-        []
-        (cons fib (fibs-until n b fib))))))
+(defn fibs-beginning-at [a b]
+  (lazy-seq (cons a (fibs-beginning-at b (+ a b)))))
+
+(defn fibs-until [n]
+  (take-while #(< % n) (fibs-beginning-at 1 2)))
 
 (defn zeckendorf
   ([n]

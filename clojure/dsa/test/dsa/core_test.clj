@@ -95,3 +95,5 @@
 
 (deftest zeckendorf-11
   (testing (is (= "10100" (zeckendorf 11)))))
+
+(run-tests)
