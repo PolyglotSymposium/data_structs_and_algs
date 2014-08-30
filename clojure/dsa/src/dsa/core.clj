@@ -21,7 +21,7 @@
     xs
     (let [pivot (first xs)
       [lt gte] (pivot-partition pivot (rest xs))]
-        (concat (qsort lt) [pivot] (qsort gte)))))
+        (lazy-cat (qsort lt) [pivot] (qsort gte)))))
 
 (defn anagrams [words] (or (vals (group-by sort words)) []))
 
